@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frozeria - Buah Beku Sehat 100ml Paper Cup</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0284c7',
+                            600: '#0369a1',
+                            700: '#095183',
+                        },
+                        berry: '#831843',
+                        tropical: '#d97706',
+                        greenpower: '#15803d',
+                        sweetenergy: '#ea580c'
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Navigasi Utama -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2">
+                <div class="w-10 h-10 rounded-xl bg-brand-500 flex items-center justify-center text-white shadow-md shadow-brand-500/20">
+                    <i class="fa-solid fa-snowflake text-xl"></i>
+                </div>
+                <div>
+                    <span class="text-2xl font-black tracking-tight text-brand-600">FROZERIA</span>
+                    <span class="block text-[10px] tracking-widest text-slate-400 font-bold uppercase">Healthy Frozen Fruits</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 font-semibold text-slate-600 text-sm">
+                <a href="#varian" class="hover:text-brand-600 transition">Varian Buah</a>
+                <a href="#keunggulan" class="hover:text-brand-600 transition">Keunggulan</a>
+                <a href="#custom-mix" class="hover:text-brand-600 transition">Custom Mix</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <button onclick="toggleCart()" class="relative p-3 rounded-full bg-slate-100 hover:bg-brand-50 text-slate-700 hover:text-brand-600 transition">
+                    <i class="fa-solid fa-cart-shopping text-lg"></i>
+                    <span id="cart-badge" class="absolute -top-1 -right-1 bg-red-500 text-white text-[11px] font-bold w-5 h-5 rounded-full flex items-center justify-center hidden">0</span>
+                </button>
+                <a href="#varian" class="hidden sm:inline-flex bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm px-5 py-2.5 rounded-full shadow-lg shadow-brand-600/30 transition transform active:scale-95">
+                    Pesan Sekarang
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner Utama (Hero) -->
+    <section class="relative overflow-hidden pt-12 pb-20 lg:py-24 bg-gradient-to-b from-sky-50/50 via-white to-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-100/80 text-brand-700 text-xs font-bold uppercase tracking-wider">
+                        <i class="fa-solid fa-leaf text-emerald-500"></i> 100% Eco Paper Cup 100ml
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                        Cemilan Buah Beku Praktis, <span class="text-brand-600">Sehat & Terjangkau</span>
+                    </h1>
+                    <p class="text-slate-600 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                        Porsi tepat 100ml tanpa gula tambahan dan pengawet. Mulai dari Rp 5.000 saja, nikmati kesegaran buah asli siap santap atau diblender!
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#varian" class="w-full sm:w-auto px-8 py-4 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-2xl shadow-xl shadow-brand-600/25 transition text-center">
+                            Lihat Menu Varian
+                        </a>
+                        <a href="#custom-mix" class="w-full sm:w-auto px-8 py-4 bg-white border border-slate-200 hover:border-brand-500 text-slate-700 font-bold rounded-2xl transition text-center shadow-sm">
+                            Buat Mix Sendiri
+                        </a>
+                    </div>
+                </div>
+
+                <div class="relative flex justify-center">
+                    <div class="relative bg-white p-3 rounded-3xl shadow-2xl border border-slate-100 max-w-md lg:max-w-full">
+                        <img src="watermarked_img_5243016340651718435.jpg" alt="Frozeria Paper Cup Trio 100ml" class="rounded-2xl w-full object-cover shadow-inner">
+                        <div class="absolute -bottom-4 -left-4 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">
+                                <i class="fa-solid fa-tag"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-slate-800">Harga Hemat</p>
+                                <p class="text-[11px] text-slate-500">Rp 5.000 - Rp 8.000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Katalog Produk -->
+    <section id="varian" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-brand-600 font-bold text-sm uppercase tracking-widest">Katalog Produk</span>
+                <h2 class="text-3xl sm:text-4xl font-black text-slate-900 mt-2">Pilihan Varian Paper Cup 100ml</h2>
+                <p class="text-slate-600 mt-3">Dikemas segar dalam wadah ramah lingkungan dengan porsi pas sekali makan.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Varian 1: Berry Refresh -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col hover:-translate-y-1 transition duration-300">
+                    <div class="relative h-60 overflow-hidden bg-slate-100">
+                        <img src="tropical sunrise.jpg" alt="Berry Refresh" class="w-full h-full object-cover">
+                        <span class="absolute top-4 right-4 bg-berry text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">Immunity</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-extrabold text-slate-900">Berry Refresh</h3>
+                            <p class="text-xs font-bold text-slate-400 mt-1">Stroberi • Bluberi • Raspberi</p>
+                            <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+                                Tinggi Vitamin C dan antioksidan untuk menjaga kekebalan tubuh.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-slate-400 block">Harga</span>
+                                <span class="text-lg font-black text-slate-900">Rp 7.500</span>
+                            </div>
+                            <button onclick="addToCart('Berry Refresh', 7500, 'watermarked_img_1436627005895788492.jpg')" class="bg-brand-600 hover:bg-brand-700 text-white p-3 rounded-xl shadow-md transition">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Varian 2: Tropical Sunrise -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col hover:-translate-y-1 transition duration-300">
+                    <div class="relative h-60 overflow-hidden bg-slate-100">
+                        <img src="tr" alt="Tropical Sunrise" class="w-full h-full object-cover">
+                        <span class="absolute top-4 right-4 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">Digestive</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-extrabold text-slate-900">Tropical Sunrise</h3>
+                            <p class="text-xs font-bold text-slate-400 mt-1">Mangga • Nanas • Buah Naga</p>
+                            <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+                                Manis alami dan tropis yang kaya serat untuk melancarkan pencernaan.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-slate-400 block">Harga</span>
+                                <span class="text-lg font-black text-slate-900">Rp 6.000</span>
+                            </div>
+                            <button onclick="addToCart('Tropical Sunrise', 6000, 'watermarked_img_5671970280275758947.jpg')" class="bg-brand-600 hover:bg-brand-700 text-white p-3 rounded-xl shadow-md transition">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Varian 3: Green Power -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col hover:-translate-y-1 transition duration-300">
+                    <div class="relative h-60 overflow-hidden bg-slate-100">
+                        <img src="green power.jpg" alt="Green Power" class="w-full h-full object-cover">
+                        <span class="absolute top-4 right-4 bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">Diet Care</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-extrabold text-slate-900">Green Power</h3>
+                            <p class="text-xs font-bold text-slate-400 mt-1">Alpukat • Kiwi • Melon</p>
+                            <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+                                Lemak baik & serat alami untuk rasa kenyang lebih lama saat program diet.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-slate-400 block">Harga</span>
+                                <span class="text-lg font-black text-slate-900">Rp 8.000</span>
+                            </div>
+                            <button onclick="addToCart('Green Power', 8000, 'watermarked_img_9894413571194716337.jpg')" class="bg-brand-600 hover:bg-brand-700 text-white p-3 rounded-xl shadow-md transition">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Varian 4: Sweet Energy -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col hover:-translate-y-1 transition duration-300">
+                    <div class="relative h-60 overflow-hidden bg-slate-100">
+                        <img src="sweet energy.jpg" alt="Sweet Energy" class="w-full h-full object-cover">
+                        <span class="absolute top-4 right-4 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">Pre-Workout</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-extrabold text-slate-900">Sweet Energy</h3>
+                            <p class="text-xs font-bold text-slate-400 mt-1">Pisang • Kurma • Stroberi</p>
+                            <p class="text-slate-600 text-sm mt-3 leading-relaxed">
+                                Energi instan dan karbohidrat alami sebelum atau sesudah berolahraga.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-slate-400 block">Harga</span>
+                                <span class="text-lg font-black text-slate-900">Rp 6.500</span>
+                            </div>
+                            <button onclick="addToCart('Sweet Energy', 6500, 'watermarked_img_4809469080796312566.jpg')" class="bg-brand-600 hover:bg-brand-700 text-white p-3 rounded-xl shadow-md transition">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Mix Builder Section -->
+    <section id="custom-mix" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-slate-900 to-brand-900 rounded-3xl p-8 lg:p-12 text-white shadow-2xl relative overflow-hidden">
+                <div class="grid lg:grid-cols-2 gap-12 items-center relative z-10">
+                    <div>
+                        <span class="text-brand-300 font-bold text-xs uppercase tracking-widest">Interactive Builder</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold mt-2">Racik Paper Cup 100ml Versimu!</h2>
+                        <p class="text-slate-300 mt-3 text-sm leading-relaxed">
+                            Pilih kombinasi hingga 3 jenis buah kesukaanmu. Dikemas rapat dalam porsi presisi 100ml.
+                        </p>
+
+                        <div class="mt-8 space-y-4">
+                            <label class="block text-sm font-semibold text-slate-200">Pilih Buah (Maksimal 3):</label>
+                            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3" id="fruit-options">
+                                <button type="button" onclick="toggleFruit('Stroberi')" class="fruit-btn px-4 py-2.5 rounded-xl border border-slate-700 bg-slate-800/80 text-sm font-medium transition text-left" data-fruit="Stroberi">🍓 Stroberi</button>
+                                <button type="button" onclick="toggleFruit('Bluberi')" class="fruit-btn px-4 py-2.5 rounded-xl border border-slate-700 bg-slate-800/80 text-sm font-medium transition text-left" data-fruit="Bluberi">🫐 Bluberi</button>
+                                <button type="button" onclick="toggleFruit('Mangga')" class="fruit-btn px-4 py-2.5 rounded-xl border border-slate-700 bg-slate-800/80 text-sm font-medium transition text-left" data-fruit="Mangga">🥭 Mangga</button>
+                                <button type="button" onclick="toggleFruit('Kiwi')" class="fruit-btn px-4 py-2.5 rounded-xl border border-slate-700 bg-slate-800/80 text-sm font-medium transition text-left" data-fruit="Kiwi">🥝 Kiwi</button>
+                                <button type="button" onclick="toggleFruit('Alpukat')" class="fruit-btn px-4 py-2.5 rounded-xl border border-slate-700 bg-slate-800/80 text-sm font-medium transition text-left" data-fruit="Alpukat">🥑 Alpukat</button>
+                                <button type="button" onclick="toggleFruit('Pisang')" class="fruit-btn px-4 py-2.5 rounded-xl border border-slate-700 bg-slate-800/80 text-sm font-medium transition text-left" data-fruit="Pisang">🍌 Pisang</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/90 p-8 rounded-2xl border border-slate-700 shadow-xl">
+                        <h3 class="text-lg font-bold text-white mb-4">Ringkasan Custom Cup 100ml</h3>
+                        <div class="space-y-3 border-b border-slate-700 pb-4 mb-4 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-slate-400">Pilihan Buah:</span>
+                                <span id="custom-selected-list" class="font-bold text-brand-300">Belum memilih</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-slate-400">Estimasi Kalori:</span>
+                                <span id="custom-calories" class="font-bold text-emerald-400">0 kcal</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="text-slate-300 font-semibold">Harga Custom:</span>
+                            <span class="text-2xl font-extrabold text-white">Rp 8.000</span>
+                        </div>
+                        <button onclick="addCustomToCart()" class="w-full py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-bold rounded-xl shadow-lg transition">
+                            Tambah Custom Cup ke Keranjang
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Keranjang Belanja -->
+    <div id="cart-drawer" class="fixed inset-0 z-50 overflow-hidden hidden">
+        <div class="absolute inset-0 bg-slate-900/50 backdrop-blur-sm" onclick="toggleCart()"></div>
+        <div class="fixed inset-y-0 right-0 max-w-full flex pl-10">
+            <div class="w-screen max-w-md bg-white shadow-2xl flex flex-col">
+                <div class="p-6 bg-slate-50 border-b border-slate-100 flex items-center justify-between">
+                    <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                        <i class="fa-solid fa-bag-shopping text-brand-600"></i> Keranjang Belanja
+                    </h2>
+                    <button onclick="toggleCart()" class="text-slate-400 hover:text-slate-600">
+                        <i class="fa-solid fa-xmark text-xl"></i>
+                    </button>
+                </div>
+
+                <div id="cart-items" class="flex-1 overflow-y-auto p-6 space-y-4"></div>
+
+                <div class="p-6 border-t border-slate-100 bg-slate-50 space-y-4">
+                    <div class="flex justify-between text-base font-bold text-slate-900">
+                        <span>Total Pembayaran</span>
+                        <span id="cart-total">Rp 0</span>
+                    </div>
+                    <button onclick="checkoutWA()" class="w-full py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-2xl shadow-lg flex items-center justify-center gap-2 transition">
+                        <i class="fa-brands fa-whatsapp text-xl"></i> Pesan via WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-10 border-t border-slate-800 text-center text-xs">
+        <p>© 2026 Frozeria Indonesia. All rights reserved.</p>
+    </footer>
+
+    <!-- Script Interaktif -->
+    <script>
+        let cart = [];
+        let selectedFruits = [];
+
+        function toggleCart() {
+            document.getElementById('cart-drawer').classList.toggle('hidden');
+        }
+
+        function addToCart(name, price, image) {
+            const existing = cart.find(item => item.name === name);
+            if(existing) {
+                existing.qty += 1;
+            } else {
+                cart.push({ name, price, qty: 1, image });
+            }
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const container = document.getElementById('cart-items');
+            const badge = document.getElementById('cart-badge');
+            const totalEl = document.getElementById('cart-total');
+
+            const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
+            const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+
+            if(totalQty > 0) {
+                badge.textContent = totalQty;
+                badge.classList.remove('hidden');
+            } else {
+                badge.classList.add('hidden');
+            }
+
+            if(cart.length === 0) {
+                container.innerHTML = `<p class="text-center text-slate-400 py-12 text-sm">Keranjang belanjaan masih kosong.</p>`;
+            } else {
+                container.innerHTML = cart.map((item, index) => `
+                    <div class="flex items-center gap-4 bg-slate-50 p-3 rounded-2xl border border-slate-100">
+                        <img src="${item.image}" class="w-16 h-16 rounded-xl object-cover">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-slate-900 text-sm">${item.name}</h4>
+                            <p class="text-xs text-slate-500">Rp ${item.price.toLocaleString('id-ID')}</p>
+                            <div class="flex items-center gap-3 mt-2">
+                                <button onclick="changeQty(${index}, -1)" class="w-6 h-6 rounded-lg bg-white border border-slate-200 text-xs font-bold">-</button>
+                                <span class="text-xs font-bold">${item.qty}</span>
+                                <button onclick="changeQty(${index}, 1)" class="w-6 h-6 rounded-lg bg-white border border-slate-200 text-xs font-bold">+</button>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            totalEl.textContent = `Rp ${totalPrice.toLocaleString('id-ID')}`;
+        }
+
+        function changeQty(index, delta) {
+            cart[index].qty += delta;
+            if(cart[index].qty <= 0) cart.splice(index, 1);
+            updateCartUI();
+        }
+
+        function toggleFruit(fruit) {
+            const idx = selectedFruits.indexOf(fruit);
+            if(idx > -1) {
+                selectedFruits.splice(idx, 1);
+            } else {
+                if(selectedFruits.length < 3) {
+                    selectedFruits.push(fruit);
+                } else {
+                    alert('Maksimal memilih 3 jenis buah.');
+                }
+            }
+
+            document.querySelectorAll('.fruit-btn').forEach(btn => {
+                const f = btn.getAttribute('data-fruit');
+                if(selectedFruits.includes(f)) {
+                    btn.classList.add('bg-brand-600', 'border-brand-500', 'text-white');
+                    btn.classList.remove('bg-slate-800/80', 'border-slate-700');
+                } else {
+                    btn.classList.remove('bg-brand-600', 'border-brand-500', 'text-white');
+                    btn.classList.add('bg-slate-800/80', 'border-slate-700');
+                }
+            });
+
+            document.getElementById('custom-selected-list').textContent = selectedFruits.length ? selectedFruits.join(', ') : 'Belum memilih';
+            document.getElementById('custom-calories').textContent = `${selectedFruits.length * 25} kcal`;
+        }
+
+        function addCustomToCart() {
+            if(selectedFruits.length === 0) {
+                alert('Silakan pilih minimal 1 jenis buah.');
+                return;
+            }
+            addToCart(`Custom Cup (${selectedFruits.join(', ')})`, 8000, 'watermarked_img_5243016340651718435.jpg');
+            toggleCart();
+        }
+
+        function checkoutWA() {
+            if(cart.length === 0) return;
+            let text = "Halo Frozeria, saya ingin memesan:\n\n";
+            cart.forEach(item => {
+                text += `• ${item.name} (${item.qty}x) = Rp ${(item.price * item.qty).toLocaleString('id-ID')}\n`;
+            });
+            const total = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+            text += `\n*Total: Rp ${total.toLocaleString('id-ID')}*\nMohon diproses, terima kasih!`;
+            
+            window.open(`https://wa.me/6281553901849?text=${encodeURIComponent(text)}`, '_blank');
+            
+        }
+    </script>
+</body>
+</html>
